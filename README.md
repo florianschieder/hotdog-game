@@ -4,14 +4,14 @@ Beschreibung:
 =============
 
 Bei diesem Projekt handelt es sich um ein Spiel, bei dem man einen Hund spielt. Dieser
-muss in Hotdogbuden W�rstchen sammeln, um sich vor Gegnern zu sch�tzen, und der t�dlichen
+muss in Hotdogbuden Würstchen sammeln, um sich vor Gegnern zu schützen, und der tödlichen
 Ketchupflasche entkommen.
 
 Es gibt verschiedene Modi mit unterschiedlichen Zeitlimits, in denen man die Level schaffen
 muss. Doch die Zeitlimits sind nicht die einzigen Gemeinheit, die die einzelnen Modi mit sich
 bringen... :-)
 
-Die Fenstergr��e ist zurzeit einheitlich 1152 x 864 Pixel.
+Die Fenstergröße ist zurzeit einheitlich 1152 x 864 Pixel.
 
 Derzeit wird (noch) die Engine-Alpha verwendet.
 
@@ -21,7 +21,7 @@ Konventionen:
 1.) Dokumentation des Quellcodes:
 ---------------------------------
 
-Der Quellcode wird ausf�hrlich dokumentiert. Das bedeutet, dass jede Klasse bzw. jede Methode einen
+Der Quellcode wird ausführlich dokumentiert. Das bedeutet, dass jede Klasse bzw. jede Methode einen
 vorgegebenen Dokumentationskommentar der jeweiligen Art besitzt.
 
 So dokumentieren wir eine Klasse / eine Enumeration / ein Interface:
@@ -47,13 +47,13 @@ So dokumentieren wir eine Methode:
 
 Pro Parameter einer Methode wird eine param-Zeile mit Argumentname und Beschreibung erzeugt,
 solange Parameter vorliegen. Wenn nicht, gibt es hier keine param-Zeilen.
-Sofern die Methode nicht <void> zur�ckliefert, muss es eine Beschreibung f�r den R�ckgabewert
+Sofern die Methode nicht <void> zurückliefert, muss es eine Beschreibung für den Rückgabewert
 geben.
 
-Ein Dokumentationskommentar steht jeweils direkt (!) vor den K�pfen (z.B. vor "public class ...",
+Ein Dokumentationskommentar steht jeweils direkt (!) vor den Köpfen (z.B. vor "public class ...",
 "interface ..." oder dem Methodenkopf).
 
-Dar�ber hinaus werden die wichtigsten, "kompliziertesten" Stellen mit "normalen" Kommentaren versehen.
+Darüber hinaus werden die wichtigsten, kompliziertesten Stellen mit "normalen" Kommentaren versehen.
 
 2.) Assets
 ----------
