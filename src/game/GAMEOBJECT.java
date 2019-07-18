@@ -5,10 +5,11 @@
  */
 
 package game;
-import ea.*;
+
+import engine.*;
 
 public class GAMEOBJECT {
-    public Bild image;
+    public Image image;
     private boolean isFix;
     
     /**
@@ -31,7 +32,7 @@ public class GAMEOBJECT {
      * @param fix Ist das Objekt fixiert oder nicht?
      */
     public GAMEOBJECT(int x, int y, int w, int h, String bildBezeichner, boolean fix) {
-        image = new Bild(x, y, w, h, ASSETS.image(bildBezeichner), true);
+        image = new Image(x, y, w, h, bildBezeichner);
         isFix = fix;
         
         if(isFix) {

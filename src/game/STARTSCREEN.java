@@ -1,11 +1,12 @@
+package game;
+
+import engine.*;
+
 /**
  * Startbildschirm
  *  
  * @author Dennis Simontowsky
  */
-
-package game;
-
 public class STARTSCREEN extends LEVEL {
     private FLOOR boden1;
     private FLOOR boden2;
@@ -35,7 +36,7 @@ public class STARTSCREEN extends LEVEL {
         
         // Hintergrund ändern
         this.gameReference.removeRaumObjekt(this.background);
-        this.background = new ea.Bild(0, 0, 1152, 864, ASSETS.image("startscreen"));
+        this.background = new Image(0, 0, 1152, 864, "startscreen");
         this.gameReference.addRaumObjekt(this.background);
         
         // Text weg
@@ -98,7 +99,7 @@ public class STARTSCREEN extends LEVEL {
     
     @Override
     public void limitLoop() {
-        // Ticker wird "abgeschalten", also gibt es kein Limit-Verhalten ^^ (da super.limitLoop() nicht aufgerufen wird!)
+        // Limit-Verhalten wird "abgeschalten" (da super.limitLoop() nicht aufgerufen wird!)
         if(this.gameReference.zufallsBoolean()) kb.throwKetchup();
     }
 }

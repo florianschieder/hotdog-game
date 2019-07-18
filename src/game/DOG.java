@@ -4,7 +4,8 @@
  * @author Florian Schieder
  */
 package game;
-import ea.*;
+
+import engine.*;
 
 public class DOG
     extends GRAVITYOBJECT
@@ -27,10 +28,6 @@ public class DOG
     public DOG(int x, int y, HOTDOGGAME gameref) {
         super(x, y, 58, 37, "hotdog_r0");
         ref = gameref;
-        
-        woofSound = new Sound(ASSETS.sound("woof"));
-        dieSound = new Sound(ASSETS.sound("die"));
-        jumpSound = new Sound(ASSETS.sound("jump"));
     }
    
      /**
@@ -56,15 +53,15 @@ public class DOG
         switch(code) {
             case Taste.LEERTASTE:
                 if(sausages > 0 && currentSausage == null) {
-                    woofSound.play();
+                	engine.Sound.play("woof");
                     currentSausage = new SAUSAGE(this, (ref.tasteGedrueckt(Taste.LINKS) ? -1 : 1)); // Copyright Florian Schieder :)
                     ref.addGameObject(currentSausage);
                     sausages--;
                 }
-                if(sausages == 0) dieSound.play();
+                if(sausages == 0) engine.Sound.play("die");
                 break;
             case Taste.OBEN:
-                jumpSound.play();
+            	engine.Sound.play("jump");
                 image.sprung(8);
                 break;
         }
@@ -78,6 +75,6 @@ public class DOG
     }
     
     public void DieSound() {
-        dieSound.play();
+    	engine.Sound.play("die");
     }
 }

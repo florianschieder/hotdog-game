@@ -9,10 +9,11 @@
 package game;
 
 import ea.*;
+import engine.*;
 
 public class LEVEL {
     // Attribute
-    public Bild background;
+    public Image background;
     public int limit;
     public int levelNumber;
     public DOG player;
@@ -23,7 +24,7 @@ public class LEVEL {
     public Text gameover;
     public HOTDOGGAME gameReference;
     
-    private Sound vSound;
+    private engine.Sound vSound;
 
     /**
      * Konstruktur der Klasse LEVEL.
@@ -35,7 +36,7 @@ public class LEVEL {
         this.mode = mode;
         this.gameReference = game;
 
-        background = new Bild(0, 0, 1152, 864, ASSETS.image("background"));
+        background = new Image(0, 0, 1152, 864, "background");
         game.addRaumObjekt(background);
     }
     
@@ -43,8 +44,6 @@ public class LEVEL {
      * Die Methode, die den Level und seine Objekte erstellt. In der Basisklasse hat sie keine Funktion.
      */
     public void create() {
-        vSound = new Sound(ASSETS.sound("victory"));
-        
         switch(mode) {
             case Easy:
                 limit = 60;
@@ -98,10 +97,7 @@ public class LEVEL {
         if(this.player.currentSausage != null && (this.player.currentSausage.image.getX() > 1152 || this.player.currentSausage.image.getY() > 864)) this.player.currentSausage = null;
         
         if(this.player.collision(this.goal)) {
-            if(vSound != null) { // Nötig, da der Sound sonst keine Ahnung wie oft gespielt wird, da die Kollisionsmethode permanent aufgerufen wird ^^
-                vSound.play();
-                vSound = null;
-            }
+        	engine.Sound.play("victory");
             
             destroy();
             gameReference.nextLevel(this);
