@@ -8,12 +8,19 @@ muss in Hotdogbuden Würstchen sammeln, um sich vor Gegnern zu schützen, und de
 Ketchupflasche entkommen.
 
 Es gibt verschiedene Modi mit unterschiedlichen Zeitlimits, in denen man die Level schaffen
-muss. Doch die Zeitlimits sind nicht die einzigen Gemeinheit, die die einzelnen Modi mit sich
-bringen... :-)
+muss. Doch die Zeitlimits sind nicht die einzigen Gemeinheiten, die die einzelnen Modi mit
+sich bringen... :-)
 
 Die Fenstergröße ist zurzeit einheitlich 1152 x 864 Pixel.
 
 Derzeit wird (noch) die Engine-Alpha verwendet.
+
+Entwicklungsziel dieser Version:
+================================
+
+Diese Versionsspaltung auf "abstraction" hat zum Ziel, eine Abstraktion und somit als
+noch fernes Ziel eine Umstellung auf eine andere 2D-Engine vorzunehmen. Damit werden
+viele Optimierungen und Änderungen im jetzigen Stand der Spielelemente einhergehen.
 
 Konventionen:
 =============
