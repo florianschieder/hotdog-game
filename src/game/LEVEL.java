@@ -24,8 +24,6 @@ public class LEVEL {
     public Text gameover;
     public HOTDOGGAME gameReference;
     
-    private engine.Sound vSound;
-
     /**
      * Konstruktur der Klasse LEVEL.
      *

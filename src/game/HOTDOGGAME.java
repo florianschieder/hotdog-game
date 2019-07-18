@@ -18,7 +18,6 @@ public class HOTDOGGAME
 	public LEVEL currentLevel;
     private int ticker = 0;
     public Physik physics;
-    private engine.Sound backgroundSound;
     
     /**
      * Konstruktor der Klasse HOTDOGGAME.

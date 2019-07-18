@@ -14,11 +14,7 @@ public class DOG
     private HOTDOGGAME ref;
     public SAUSAGE currentSausage;
     public int sausages = 3;
-    
-    private Sound woofSound;
-    private Sound dieSound;
-    private Sound jumpSound;
-    
+
     /**
      * Konstruktor für die Klasse DOG.
      *
