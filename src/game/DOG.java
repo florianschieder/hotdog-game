@@ -1,14 +1,10 @@
-package game;
-import ea.*;
-
 /**
- * Komponente:  DOG <br>
- * Typ:         Klasse <br>
- * <br>
- * Funktion:    Klasse für den Spieler (den Hund) <br>
+ * Klasse für den Spieler
  * 
  * @author Florian Schieder
  */
+package game;
+import ea.*;
 
 public class DOG
     extends GRAVITYOBJECT

@@ -1,14 +1,9 @@
-package game;
-import ea.*;
-
 /**
- * Komponente:  FLOOR <br>
- * Typ:         Klasse <br>
- * <br>
- * Funktion:    Der feste Boden<br>
+ * Komponente für den den Boden
  *  
  * @author Florian Schieder
  */
+package game;
 
 public class FLOOR extends GAMEOBJECT
 {

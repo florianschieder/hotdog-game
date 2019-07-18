@@ -1,8 +1,5 @@
 /**
- * Komponente:  ASSETS <br>
- * Typ:         Klasse <br>
- * <br>
- * Funktion:    Vereinfachter Zugriff auf externe Spielelemente. <br>
+ * Vereinfachter Zugriff auf externe Spielelemente.
  *  
  * @author Florian Schieder
  */

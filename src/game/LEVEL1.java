@@ -1,12 +1,10 @@
-package game;
 /**
- * Komponente:  LEVEL1 <br>
- * Typ:         Klasse <br>
- * <br>
- * Funktion:    Erstellung des ersten Levels <br>
+ * Level 1
  *  
  * @author Dennis Simontowsky & Florian Schieder
  */
+
+package game;
 
 public class LEVEL1 extends LEVEL {
     private FLOOR boden1;

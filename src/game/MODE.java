@@ -1,12 +1,10 @@
-package game;
 /**
- * Komponente:  MODE <br>
- * Typ:         Enumeration <br>
- * <br>
- * Funktion:    Einpflegung der Spielmodi <br>
+ * Spiel-Modi
  * 
  * @author Florian Schieder
  */
+
+package game;
 
 public enum MODE
 {

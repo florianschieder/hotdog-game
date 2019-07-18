@@ -1,12 +1,10 @@
-package game;
 /**
- * Komponente:  STARTSCREEN <br>
- * Typ:         Klasse <br>
- * <br>
- * Funktion:    Startbildschirm <br>
+ * Startbildschirm
  *  
  * @author Dennis Simontowsky
  */
+
+package game;
 
 public class STARTSCREEN extends LEVEL {
     private FLOOR boden1;

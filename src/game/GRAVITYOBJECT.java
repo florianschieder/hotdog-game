@@ -1,14 +1,9 @@
-package game;
 /**
- * Komponente:  GRAVITYOBJECT <br>
- * Typ:         Klasse <br>
- * <br>
- * Funktion:    Basisklasse für jedes einzelne fallende Objekt innerhalb des Spiels.<br>
- *  <br>
- * @author Dennis Simontowsky<br>
+ * Basisklasse für jedes einzelne fallende Objekt innerhalb des Spiels.
+ * @author Dennis Simontowsky
  */
 
-import ea.*;
+package game;
 
 public class GRAVITYOBJECT extends GAMEOBJECT {
     

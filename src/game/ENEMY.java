@@ -1,14 +1,9 @@
-package game;
-import ea.*;
-
 /**
- * Komponente:  ENEMY <br>
- * Typ:         Klasse <br>
- * <br> 
- * Funktion:    Erstellung eines Gegners in der Map <br>
- *  <br>
+ * Erstellung eines Gegners in der Map
+ * 
  * @author Dennis Simontowsky
  */
+package game;
 
 public class ENEMY extends GRAVITYOBJECT
 {

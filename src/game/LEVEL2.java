@@ -1,12 +1,10 @@
-package game;
 /**
- * Komponente:  LEVEL2 <br>
- * Typ:         Klasse <br>
- * <br>
- * Funktion:    Level No. 2 ^^ <br>
+ * Level 3
  *  
  * @author Dennis Simontowsky
  */
+
+package game;
 
 public class LEVEL2 extends LEVEL {
     private FLOOR boden1;

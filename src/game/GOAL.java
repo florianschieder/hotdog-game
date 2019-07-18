@@ -1,12 +1,10 @@
-package game;
 /**
- * Komponente:  GOAL <br>
- * Typ:         Klasse <br>
- * <br>
- * Funktion:    Erstellung eines Ziel-Elements in der Map <br>
- * <br>
+ * Zielfahne in der Map
+ * 
  * @author Dennis Simontowsky
  */
+
+package game;
 
 public class GOAL extends GAMEOBJECT
 {

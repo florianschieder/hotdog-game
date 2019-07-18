@@ -1,12 +1,10 @@
-package game;
 /**
- * Komponente:  HandlesPressedKey <br>
- * Typ:         Interface <br>
- * <br>
- * Funktion:    Methodenimplementierung für HandlesPressedKey <br>
+ * Schnittstelle für gedrückte Taste
  *  
  * @author Dennis Simontowsky
  */
+
+package game;
 
 public interface HandlesPressedKey
 {

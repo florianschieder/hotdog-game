@@ -1,18 +1,13 @@
-package game;
 /**
- * Komponente:  SAUSAGE <br>
- * Typ:         Klasse <br>
- * <br>
- * Funktion:    Erstellung eines Würstchens in der Map <br>
+ * Das Würstchen, mit dem der Hund schießt.
  *  
  * @author Dennis Simontowsky
  */
 
-import ea.*;
+package game;
 
 public class SAUSAGE extends GRAVITYOBJECT
 {
-    private DOG spieler;
     private int direction;
     
     /**
@@ -30,7 +25,6 @@ public class SAUSAGE extends GRAVITYOBJECT
             "sausage"
         );
         this.direction = d;
-        this.spieler = player;
     }
     
     /**

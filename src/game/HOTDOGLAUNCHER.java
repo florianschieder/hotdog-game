@@ -1,18 +1,15 @@
-package game;
-import javax.swing.JDialog;
-import javax.swing.JOptionPane;
-
 /**
- * Komponente:  HOTDOGLAUNCHER <br>
- * Typ:         Klasse <br>
- * <br>
- * Funktion:    Haupteinsprungpunkt für das Spiel <br>
- *  Startet man dieses Programm bzw. führt es als eigenständiges Programm nach <br>
- *  endgültiger Fertigstellung aus (z.B. als Endanwender), wird diese Methode <br>
- *  automatisch von Java aufgerufen. <br>
+ * Haupteinsprungpunkt für das Spiel.<br>
+ * 
+ * Startet man dieses Programm bzw. führt es als eigenständiges Programm nach <br>
+ * endgültiger Fertigstellung aus (z.B. als Endanwender), wird diese Methode <br>
+ * automatisch von Java aufgerufen. <br>
  *  
  * @author Florian Schieder
  */
+
+package game;
+import javax.swing.JOptionPane;
 
 public class HOTDOGLAUNCHER {
     

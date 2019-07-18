@@ -1,12 +1,10 @@
-package game;
 /**
- * Komponente:  HandlesHoldKey <br>
- * Typ:         Interface <br>
- * <br>
- * Funktion:    Methodenimplementierung für HandlesHoldKey <br>
+ * Schnittstelle für gehaltene Taste.
  *  
  * @author Dennis Simontowsky
  */
+
+package game;
 
 public interface HandlesHoldKey
 {

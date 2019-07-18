@@ -1,15 +1,12 @@
-package game;
 /**
- * Komponente:  LEVEL <br>
- * Typ:         Klasse <br>
- * <br>
- * Funktion:    Basisklasse für einen Level <br>
  *  Diese Klasse ist eine Oberklasse für alle Level in diesem Spiel, <br>
  *  Sie beinhaltet automatisch "leere" Methoden für die Erstellung <br>
  *  und Entfernung der Game-Objekte. <br>
  *  
  * @author Florian Schieder
  */
+
+package game;
 
 import ea.*;
 
@@ -124,7 +121,8 @@ public class LEVEL {
     /**
      * Die Methode, die alle Objekte des Levels löscht.
      */
-    public void destroy() {
+    @SuppressWarnings("static-access")
+	public void destroy() {
         this.gameReference.physics.neutralize();
         if(this.gameReference.manager.istAngemeldet(this.gameReference)) this.gameReference.manager.alleAbmelden();
         

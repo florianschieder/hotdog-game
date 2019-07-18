@@ -1,28 +1,24 @@
-package game;
-import ea.*;
-import ea.internal.phy.*;
-
 /**
- * Komponente:  HOTDOGGAME<br>
- * Typ:         Klasse<br>
- * <br>
- * Funktion:    Hauptspielklasse<br>
  *  Diese Klasse verwaltet zentral alle Eingaben (Tastatur, Maus, ...)<br>
  *  und leitet diese ggf. an die jeweiligen Event-Handler weiter. Zudem<br>
  *  verwaltet sie die Level.<br>
  *  
  * @author Dennis Simontowsky & Florian Schieder
  */
+
+package game;
+import ea.*;
+import ea.internal.phy.*;
+
+@SuppressWarnings("serial")
 public class HOTDOGGAME
     extends Game
     implements Ticker
-{
-    public LEVEL currentLevel;
+    {	
+	public LEVEL currentLevel;
     private int ticker = 0;
     public Physik physics;
     private Sound backgroundSound;
-    
-    private MODE mode;
     
     /**
      * Konstruktor der Klasse HOTDOGGAME.<br>
@@ -46,8 +42,6 @@ public class HOTDOGGAME
         
         currentLevel = new STARTSCREEN(mode, this);
         currentLevel.start();
-
-        this.mode = mode;
         
         this.rechenintensiveArbeitSetzen(false);
     }

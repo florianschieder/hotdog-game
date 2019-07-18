@@ -1,13 +1,10 @@
-package game;
 /**
- * Komponente:  GAMEOBJECT
- * Typ:         Klasse
- * 
- * Funktion:    Basisklasse für jedes einzelne Objekt innerhalb des Spiels.
+ * Basisklasse für jedes einzelne Objekt innerhalb des Spiels.
  *  
  * @author Dennis Simontowsky
  */
 
+package game;
 import ea.*;
 
 public class GAMEOBJECT {

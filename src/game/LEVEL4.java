@@ -1,12 +1,10 @@
-package game;
 /**
- * Komponente:  LEVEL4 <br>
- * Typ:         Klasse <br>
- * <br>
- * Funktion:    Level No. 4 wie Level No. 2, bloß gemeiner ^^ <br>
+ * Level 4 wie Level 2, nur gemeiner...
  *  
  * @author Dennis Simontowsky
  */
+
+package game;
 
 public class LEVEL4 extends LEVEL {
     private FLOOR boden1;

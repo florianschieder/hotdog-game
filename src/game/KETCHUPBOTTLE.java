@@ -1,13 +1,9 @@
-package game;
-import ea.*;
-
 /**
- * Komponente:  KETCHUPBOTTLE <br>
- * Typ:         Klasse <br>
- * <br>
- * Funktion:    Erstellung einer Ketchupflasche in der Map <br>
+ * Erstellung einer Ketchupflasche in der Map
  * @author Dennis Simontowsky
  */
+
+package game;
 
 public class KETCHUPBOTTLE extends GAMEOBJECT
 {

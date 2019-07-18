@@ -1,14 +1,9 @@
-package game;
-import ea.*;
-
 /**
- * Komponente:  HOTDOGSTALL <br>
- * Typ:         Klasse <br>
- * <br>
- * Funktion:    Erstellung eines Hotdogstalls in der Map <br>
- *  
+ * Erstellung eines Hotdogstands in der Map
  * @author Dennis Simontowsky
  */
+
+package game;
 
 public class HOTDOGSTALL extends GAMEOBJECT
 {
