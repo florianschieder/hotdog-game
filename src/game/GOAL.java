@@ -9,8 +9,8 @@ package game;
 public class GOAL extends GAMEOBJECT
 {
     /**
-     * Konstruktor der Klasse GOAL <br>
-     * <br>
+     * Konstruktor der Klasse GOAL
+     * 
      * @param x x-Koordinate
      * @param y y-Koordinate
      */

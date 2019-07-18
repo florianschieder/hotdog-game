@@ -21,9 +21,9 @@ public class HOTDOGGAME
     private Sound backgroundSound;
     
     /**
-     * Konstruktor der Klasse HOTDOGGAME.<br>
-     *<br>
-     * @param mode Wert, der den Schwierigkeitsgrad angibt (ein Wert der Aufzählung MODE)<br>
+     * Konstruktor der Klasse HOTDOGGAME.
+     * 
+     * @param mode Wert, der den Schwierigkeitsgrad angibt (ein Wert der Aufzählung MODE)
      */
     public HOTDOGGAME(MODE mode)
     {

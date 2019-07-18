@@ -14,9 +14,9 @@ import javax.swing.JOptionPane;
 public class HOTDOGLAUNCHER {
     
     /**
-     * Einsprungpunkt, der beim Programmstart ausgeführt wird <br>
-     * <br>
-     * @param args Kommandozeilenargumente, die dem Programm zusätzlich übergeben werden können. <br>
+     * Einsprungpunkt, der beim Programmstart ausgeführt wird
+     * 
+     * @param args Kommandozeilenargumente, die dem Programm zusätzlich übergeben werden können.
      */
     
     public static void main(String[] args) {

@@ -11,7 +11,7 @@ public class SAUSAGE extends GRAVITYOBJECT
     private int direction;
     
     /**
-     * Konstruktor für die Klasse <br>
+     * Konstruktor für die Klasse
      * 
      * @param player Referenz auf den Hund
      * @param d Richtung ins Positive (+1) oder Negative (-1)
