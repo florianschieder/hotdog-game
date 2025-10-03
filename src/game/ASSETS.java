@@ -6,8 +6,7 @@
 
 package game;
 
-public class ASSETS
-{
+public class ASSETS {
 	public static String image(String name) {
 		return "assets/images/" + name + ".png";
 	}

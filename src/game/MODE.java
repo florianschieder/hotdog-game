@@ -6,10 +6,6 @@
 
 package game;
 
-public enum MODE
-{
-    Easy,
-    Normal,
-    Hard,
-    Extreme
+public enum MODE {
+	Easy, Normal, Hard, Extreme
 }

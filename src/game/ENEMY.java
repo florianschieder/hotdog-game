@@ -5,16 +5,15 @@
  */
 package game;
 
-public class ENEMY extends GRAVITYOBJECT
-{
-     /**
-     * Konstruktor für den Gegner
-     *
-     * @param x bestimmt xKoordinate
-     * @param y bestimmt yKoordinate
-     */
+public class ENEMY extends GRAVITYOBJECT {
+	/**
+	 * Konstruktor für den Gegner
+	 *
+	 * @param x bestimmt xKoordinate
+	 * @param y bestimmt yKoordinate
+	 */
 
-    public ENEMY(int xStart,int y) {
-       super(xStart,y,33,59,"enemy1");
-    }
+	public ENEMY(int xStart, int y) {
+		super(xStart, y, 33, 59, "enemy1");
+	}
 }

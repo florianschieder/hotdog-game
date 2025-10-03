@@ -6,10 +6,9 @@
 
 package game;
 
-public interface HandlesHoldKey
-{
-    /**
-     * Behandelt eine gehaltene Taste
-     */
-    void handleHoldKey();
+public interface HandlesHoldKey {
+	/**
+	 * Behandelt eine gehaltene Taste
+	 */
+	void handleHoldKey();
 }
