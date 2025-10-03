@@ -1,6 +1,6 @@
 /**
  * Das Würstchen, mit dem der Hund schießt.
- *  
+ *
  * @author Dennis Simontowsky
  */
 
@@ -11,7 +11,7 @@ public class SAUSAGE extends GRAVITYOBJECT {
 
 	/**
 	 * Konstruktor für die Klasse
-	 * 
+	 *
 	 * @param player Referenz auf den Hund
 	 * @param d      Richtung ins Positive (+1) oder Negative (-1)
 	 */

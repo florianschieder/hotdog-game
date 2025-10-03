@@ -1,6 +1,6 @@
 /**
  * Level 3
- *  
+ *
  * @author Dennis Simontowsky
  */
 
@@ -84,34 +84,41 @@ public class LEVEL2 extends LEVEL {
 
 		this.gameReference.removeGameObject(this.boden1);
 		this.gameReference.removeGameObject(this.boden2);
-		if (this.enemy1 != null)
+		if (this.enemy1 != null) {
 			this.gameReference.removeGameObject(this.enemy1);
-		if (this.enemy2 != null)
+		}
+		if (this.enemy2 != null) {
 			this.gameReference.removeGameObject(this.enemy2);
-		if (this.enemy3 != null)
+		}
+		if (this.enemy3 != null) {
 			this.gameReference.removeGameObject(this.enemy3);
+		}
 
-		for (int i = 0; i < stairs.length; i++) {
-			this.gameReference.removeGameObject(stairs[i]);
+		for (FLOOR stair : stairs) {
+			this.gameReference.removeGameObject(stair);
 		}
 	}
 
+	@Override
 	public void limitLoop() {
 		super.limitLoop();
 
 		if (this.mode == MODE.Hard || this.mode == MODE.Extreme) {
-			if (enemy1 != null)
+			if (enemy1 != null) {
 				enemy1.image.sprung((this.mode == MODE.Extreme)
 						? this.gameReference.zufallsZahl(20)
 						: 5);
-			if (enemy2 != null)
+			}
+			if (enemy2 != null) {
 				enemy2.image.sprung((this.mode == MODE.Extreme)
 						? this.gameReference.zufallsZahl(20)
 						: 5);
-			if (enemy3 != null)
+			}
+			if (enemy3 != null) {
 				enemy3.image.sprung((this.mode == MODE.Extreme)
 						? this.gameReference.zufallsZahl(20)
 						: 5);
+			}
 		}
 	}
 

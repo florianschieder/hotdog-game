@@ -1,6 +1,6 @@
 /**
  * Schnittstelle für gehaltene Taste.
- *  
+ *
  * @author Dennis Simontowsky
  */
 

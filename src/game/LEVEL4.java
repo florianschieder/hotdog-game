@@ -1,6 +1,6 @@
 /**
  * Level 4 wie Level 2, nur gemeiner...
- *  
+ *
  * @author Dennis Simontowsky
  */
 
@@ -100,54 +100,67 @@ public class LEVEL4 extends LEVEL {
 		this.gameReference.removeGameObject(this.boden2);
 		this.gameReference.removeGameObject(this.boden3);
 
-		if (this.enemy1 != null)
+		if (this.enemy1 != null) {
 			this.gameReference.removeGameObject(this.enemy1);
-		if (this.enemy2 != null)
+		}
+		if (this.enemy2 != null) {
 			this.gameReference.removeGameObject(this.enemy2);
-		if (this.enemy3 != null)
+		}
+		if (this.enemy3 != null) {
 			this.gameReference.removeGameObject(this.enemy3);
-		if (this.enemy4 != null)
+		}
+		if (this.enemy4 != null) {
 			this.gameReference.removeGameObject(this.enemy4);
-		if (this.enemy5 != null)
+		}
+		if (this.enemy5 != null) {
 			this.gameReference.removeGameObject(this.enemy5);
-		if (this.enemy6 != null)
+		}
+		if (this.enemy6 != null) {
 			this.gameReference.removeGameObject(this.enemy6);
+		}
 
 		this.gameReference.removeGameObject(this.stall);
 
-		for (int i = 0; i < stairs.length; i++) {
-			this.gameReference.removeGameObject(stairs[i]);
+		for (FLOOR stair : stairs) {
+			this.gameReference.removeGameObject(stair);
 		}
 	}
 
+	@Override
 	public void limitLoop() {
 		super.limitLoop();
 
 		if (this.mode == MODE.Hard || this.mode == MODE.Extreme) {
-			if (enemy1 != null)
+			if (enemy1 != null) {
 				enemy1.image.sprung((this.mode == MODE.Extreme)
 						? this.gameReference.zufallsZahl(20)
 						: 5);
-			if (enemy2 != null)
+			}
+			if (enemy2 != null) {
 				enemy2.image.sprung((this.mode == MODE.Extreme)
 						? this.gameReference.zufallsZahl(20)
 						: 5);
-			if (enemy3 != null)
+			}
+			if (enemy3 != null) {
 				enemy3.image.sprung((this.mode == MODE.Extreme)
 						? this.gameReference.zufallsZahl(20)
 						: 5);
-			if (enemy4 != null)
+			}
+			if (enemy4 != null) {
 				enemy4.image.sprung((this.mode == MODE.Extreme)
 						? this.gameReference.zufallsZahl(20)
 						: 5);
-			if (enemy5 != null)
+			}
+			if (enemy5 != null) {
 				enemy5.image.sprung((this.mode == MODE.Extreme)
 						? this.gameReference.zufallsZahl(20)
 						: 5);
-			if (enemy6 != null)
+			}
+			if (enemy6 != null) {
 				enemy6.image.sprung((this.mode == MODE.Extreme)
 						? this.gameReference.zufallsZahl(20)
 						: 5);
+			}
 		}
 	}
 

@@ -1,10 +1,10 @@
 /**
  * Haupteinsprungpunkt für das Spiel.<br>
- * 
+ *
  * Startet man dieses Programm bzw. führt es als eigenständiges Programm nach <br>
  * endgültiger Fertigstellung aus (z.B. als Endanwender), wird diese Methode <br>
  * automatisch von Java aufgerufen. <br>
- *  
+ *
  * @author Florian Schieder
  */
 
@@ -16,7 +16,7 @@ public class HOTDOGLAUNCHER {
 
 	/**
 	 * Einsprungpunkt, der beim Programmstart ausgeführt wird
-	 * 
+	 *
 	 * @param args Kommandozeilenargumente, die dem Programm zusätzlich
 	 *             übergeben werden können.
 	 */
@@ -44,7 +44,8 @@ public class HOTDOGLAUNCHER {
 						// nicht irgendein anderer festgelegt.
 		);
 
-		if (modeSelection != null)
+		if (modeSelection != null) {
 			new HOTDOGGAME(modeSelection);
+		}
 	}
 }

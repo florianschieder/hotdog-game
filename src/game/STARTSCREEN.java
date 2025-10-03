@@ -1,6 +1,6 @@
 /**
  * Startbildschirm
- *  
+ *
  * @author Dennis Simontowsky
  */
 
@@ -78,8 +78,9 @@ public class STARTSCREEN extends LEVEL {
 		this.gameReference.removeGameObject(this.stall);
 		this.gameReference.removeRaumObjekt(this.background);
 
-		if (this.kb.Ketchup != null)
+		if (this.kb.Ketchup != null) {
 			this.gameReference.removeGameObject(this.kb.Ketchup);
+		}
 	}
 
 	/**
@@ -91,10 +92,12 @@ public class STARTSCREEN extends LEVEL {
 		player.loop();
 		player.handleHoldKey();
 
-		if (kb.Ketchup != null && kb.Ketchup.collision(player))
+		if (kb.Ketchup != null && kb.Ketchup.collision(player)) {
 			lose();
-		if (enemy != null && enemy.collision(player))
+		}
+		if (enemy != null && enemy.collision(player)) {
 			lose();
+		}
 		if (player.currentSausage != null && enemy != null
 				&& enemy.collision(player.currentSausage)) {
 			gameReference.removeGameObject(enemy);
@@ -109,7 +112,8 @@ public class STARTSCREEN extends LEVEL {
 	public void limitLoop() {
 		// Ticker wird "abgeschalten", also gibt es kein Limit-Verhalten ^^ (da
 		// super.limitLoop() nicht aufgerufen wird!)
-		if (this.gameReference.zufallsBoolean())
+		if (this.gameReference.zufallsBoolean()) {
 			kb.throwKetchup();
+		}
 	}
 }

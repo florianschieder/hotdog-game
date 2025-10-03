@@ -1,6 +1,6 @@
 /**
  * Level 3
- *  
+ *
  * @author Dennis Simontowsky
  */
 
@@ -67,16 +67,17 @@ public class LEVEL3 extends LEVEL {
 
 		this.gameReference.removeGameObject(this.boden1);
 
-		for (int i = 0; i < stairs_l.length; i++) {
-			this.gameReference.removeGameObject(stairs_l[i]);
+		for (FLOOR element : stairs_l) {
+			this.gameReference.removeGameObject(element);
 		}
 
-		for (int i = 0; i < stairs_r.length; i++) {
-			this.gameReference.removeGameObject(stairs_r[i]);
+		for (FLOOR element : stairs_r) {
+			this.gameReference.removeGameObject(element);
 		}
 
-		if (this.kb.Ketchup != null)
+		if (this.kb.Ketchup != null) {
 			this.gameReference.removeGameObject(this.kb.Ketchup);
+		}
 	}
 
 	/**
@@ -85,8 +86,9 @@ public class LEVEL3 extends LEVEL {
 	@Override
 	public void loop() {
 		super.loop();
-		if (kb.loop(player))
+		if (kb.loop(player)) {
 			lose();
+		}
 		player.loop();
 		player.handleHoldKey();
 	}
@@ -94,7 +96,8 @@ public class LEVEL3 extends LEVEL {
 	@Override
 	public void limitLoop() {
 		super.limitLoop();
-		if (this.gameReference.zufallsBoolean())
+		if (this.gameReference.zufallsBoolean()) {
 			this.kb.throwKetchup();
+		}
 	}
 }

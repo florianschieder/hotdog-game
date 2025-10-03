@@ -1,6 +1,6 @@
 /**
  * Basisklasse für jedes einzelne Objekt innerhalb des Spiels.
- *  
+ *
  * @author Dennis Simontowsky
  */
 
@@ -23,7 +23,7 @@ public class GAMEOBJECT {
 
 	/**
 	 * Konstruktor von GAMEOBJECT
-	 * 
+	 *
 	 * @param x              x-Position
 	 * @param y              y-Position
 	 * @param w              Breite
@@ -45,7 +45,7 @@ public class GAMEOBJECT {
 
 	/**
 	 * Kollisions-Checker
-	 * 
+	 *
 	 * @param obj Objekt, auf das Kollision überprüft werden soll
 	 */
 

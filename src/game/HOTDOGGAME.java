@@ -2,7 +2,7 @@
  *  Diese Klasse verwaltet zentral alle Eingaben (Tastatur, Maus, ...)<br>
  *  und leitet diese ggf. an die jeweiligen Event-Handler weiter. Zudem<br>
  *  verwaltet sie die Level.<br>
- *  
+ *
  * @author Dennis Simontowsky & Florian Schieder
  */
 
@@ -22,7 +22,7 @@ public class HOTDOGGAME extends Game implements Ticker {
 
 	/**
 	 * Konstruktor der Klasse HOTDOGGAME.
-	 * 
+	 *
 	 * @param mode Wert, der den Schwierigkeitsgrad angibt (ein Wert der
 	 *             Aufzählung MODE)
 	 */
@@ -113,7 +113,8 @@ public class HOTDOGGAME extends Game implements Ticker {
 	 * Die Erweiterungsmethode, die ein GAMEOBJECT vom Fenster entfernt.
 	 */
 	public void removeGameObject(GAMEOBJECT obj) {
-		if (obj != null)
+		if (obj != null) {
 			removeRaumObjekt(obj.image);
+		}
 	}
 }

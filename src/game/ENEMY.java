@@ -1,6 +1,6 @@
 /**
  * Erstellung eines Gegners in der Map
- * 
+ *
  * @author Dennis Simontowsky
  */
 package game;

@@ -1,6 +1,6 @@
 /**
  * Spiel-Modi
- * 
+ *
  * @author Florian Schieder
  */
 

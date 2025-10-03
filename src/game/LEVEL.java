@@ -2,7 +2,7 @@
  *  Diese Klasse ist eine Oberklasse für alle Level in diesem Spiel, <br>
  *  Sie beinhaltet automatisch "leere" Methoden für die Erstellung <br>
  *  und Entfernung der Game-Objekte. <br>
- *  
+ *
  * @author Florian Schieder
  */
 
@@ -11,6 +11,7 @@ package game;
 import ea.Bild;
 import ea.Sound;
 import ea.Text;
+import ea.internal.phy.Physik;
 
 public class LEVEL {
 	// Attribute
@@ -70,7 +71,7 @@ public class LEVEL {
 	/**
 	 * Die Methode, die den Statustext (je nach aktuellem Limit etc.)
 	 * zurückgibt.
-	 * 
+	 *
 	 * @return Der Statustext für die Anzeige
 	 */
 	public String getStatus() {
@@ -102,12 +103,14 @@ public class LEVEL {
 	}
 
 	public void loop() {
-		if (this.player.image.getX() > 1152 || this.player.image.getY() > 864)
+		if (this.player.image.getX() > 1152 || this.player.image.getY() > 864) {
 			lose();
+		}
 		if (this.player.currentSausage != null
 				&& (this.player.currentSausage.image.getX() > 1152
-						|| this.player.currentSausage.image.getY() > 864))
+						|| this.player.currentSausage.image.getY() > 864)) {
 			this.player.currentSausage = null;
+		}
 
 		if (this.player.collision(this.goal)) {
 			if (vSound != null) { // Nötig, da der Sound sonst keine Ahnung wie
@@ -138,17 +141,19 @@ public class LEVEL {
 	 */
 	@SuppressWarnings("static-access")
 	public void destroy() {
-		this.gameReference.physics.neutralize();
-		if (this.gameReference.manager.istAngemeldet(this.gameReference))
+		Physik.neutralize();
+		if (this.gameReference.manager.istAngemeldet(this.gameReference)) {
 			this.gameReference.manager.alleAbmelden();
+		}
 
 		this.gameReference.removeGameObject(player);
 		this.gameReference.removeGameObject(goal);
 		this.gameReference.removeRaumObjekt(gameover);
 		this.gameReference.removeRaumObjekt(anzeige);
 
-		if (this.player.currentSausage != null)
+		if (this.player.currentSausage != null) {
 			this.gameReference.removeGameObject(this.player.currentSausage);
+		}
 	}
 
 	/**

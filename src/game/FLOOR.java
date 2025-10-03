@@ -1,6 +1,6 @@
 /**
  * Komponente für den den Boden
- *  
+ *
  * @author Florian Schieder
  */
 package game;
@@ -8,7 +8,7 @@ package game;
 public class FLOOR extends GAMEOBJECT {
 	/**
 	 * Konstruktor der Klasse FLOOR
-	 * 
+	 *
 	 * @param x x-Position
 	 * @param y y-Position
 	 * @param w Breite

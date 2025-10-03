@@ -1,6 +1,6 @@
 /**
  * Schnittstelle für gedrückte Taste
- *  
+ *
  * @author Dennis Simontowsky
  */
 

@@ -1,6 +1,6 @@
 /**
  * Vereinfachter Zugriff auf externe Spielelemente.
- *  
+ *
  * @author Florian Schieder
  */
 
