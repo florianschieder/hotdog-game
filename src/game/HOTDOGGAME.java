@@ -18,7 +18,6 @@ public class HOTDOGGAME
 	public LEVEL currentLevel;
     private int ticker = 0;
     public Physik physics;
-    private Sound backgroundSound;
     
     /**
      * Konstruktor der Klasse HOTDOGGAME.
@@ -34,9 +33,6 @@ public class HOTDOGGAME
             true,               // ESC beendet das Spiel
             0, 0                // Sicherheitshalber das Fenster oben im Eck positionieren
         );
-        
-        backgroundSound = new Sound(ASSETS.sound("bg"));
-        backgroundSound.loop();
         
         physics = Physik.getPhysik();
         
