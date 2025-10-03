@@ -3,7 +3,7 @@
 ## Background
 
 This game has been a meaningless school project implemented by two German high school
-students, Dennis Simontowsky (@Userdennis) and Florian Schieder (@florianschieder).
+students, Dennis Simontowsky ([@Userdennis](https://github.com/Userdennis)) and me.
 
 ## Description
 
