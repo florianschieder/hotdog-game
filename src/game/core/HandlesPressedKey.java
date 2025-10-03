@@ -4,7 +4,7 @@
  * @author Dennis Simontowsky
  */
 
-package game;
+package game.core;
 
 public interface HandlesPressedKey {
 	/**

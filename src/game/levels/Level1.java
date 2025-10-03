@@ -4,14 +4,20 @@
  * @author Dennis Simontowsky & Florian Schieder
  */
 
-package game;
+package game.levels;
 
-public class LEVEL1 extends LEVEL {
-	private FLOOR boden1;
-	private FLOOR boden2;
-	private FLOOR boden3;
-	private FLOOR boden4;
-	private FLOOR boden5;
+import game.core.Mode;
+import game.objects.Dog;
+import game.objects.Floor;
+import game.objects.Goal;
+import game.screens.HotdogGame;
+
+public class Level1 extends BaseLevel {
+	private Floor boden1;
+	private Floor boden2;
+	private Floor boden3;
+	private Floor boden4;
+	private Floor boden5;
 
 	/**
 	 * Konstruktur der Klasse LEVEL1.
@@ -19,7 +25,7 @@ public class LEVEL1 extends LEVEL {
 	 * @param mode Schwierigkeitsgrad
 	 * @param game Referenz auf das Spielobjekt
 	 */
-	public LEVEL1(MODE mode, HOTDOGGAME game) {
+	public Level1(Mode mode, HotdogGame game) {
 		super(mode, game);
 
 		levelNumber = 1;
@@ -33,25 +39,25 @@ public class LEVEL1 extends LEVEL {
 	public void create() {
 		super.create();
 
-		this.player = new DOG(0, 0, this.gameReference);
+		this.player = new Dog(0, 0, this.gameReference);
 		this.gameReference.addGameObject(this.player);
 
-		this.boden1 = new FLOOR(0, 500, 350, 52);
+		this.boden1 = new Floor(0, 500, 350, 52);
 		this.gameReference.addGameObject(this.boden1);
 
-		this.boden2 = new FLOOR(450, 500, 150, 52);
+		this.boden2 = new Floor(450, 500, 150, 52);
 		this.gameReference.addGameObject(this.boden2);
 
-		this.boden3 = new FLOOR(600, 400, 150, 52);
+		this.boden3 = new Floor(600, 400, 150, 52);
 		this.gameReference.addGameObject(this.boden3);
 
-		this.boden4 = new FLOOR(750, 300, 150, 52);
+		this.boden4 = new Floor(750, 300, 150, 52);
 		this.gameReference.addGameObject(this.boden4);
 
-		this.boden5 = new FLOOR(900, 200, 150, 52);
+		this.boden5 = new Floor(900, 200, 150, 52);
 		this.gameReference.addGameObject(this.boden5);
 
-		this.goal = new GOAL(1000, 100);
+		this.goal = new Goal(1000, 100);
 		this.gameReference.addGameObject(this.goal);
 	}
 

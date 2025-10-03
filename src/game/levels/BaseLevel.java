@@ -6,25 +6,31 @@
  * @author Florian Schieder
  */
 
-package game;
+package game.levels;
 
 import ea.Bild;
 import ea.Sound;
 import ea.Text;
 import ea.internal.phy.Physik;
+import game.core.Assets;
+import game.core.Mode;
+import game.objects.Dog;
+import game.objects.Goal;
+import game.screens.HotdogGame;
+import game.screens.SplashScreen;
 
-public class LEVEL {
+public class BaseLevel {
 	// Attribute
 	public Bild background;
 	public int limit;
 	public int levelNumber;
-	public DOG player;
-	public GOAL goal;
+	public Dog player;
+	public Goal goal;
 
 	public Text anzeige;
-	public MODE mode;
+	public Mode mode;
 	public Text gameover;
-	public HOTDOGGAME gameReference;
+	public HotdogGame gameReference;
 
 	private Sound vSound;
 
@@ -34,11 +40,11 @@ public class LEVEL {
 	 * @param mode Schwierigkeitsgrad
 	 * @param game Referenz auf das Spielobjekt
 	 */
-	public LEVEL(MODE mode, HOTDOGGAME game) {
+	public BaseLevel(Mode mode, HotdogGame game) {
 		this.mode = mode;
 		this.gameReference = game;
 
-		background = new Bild(0, 0, 1152, 864, ASSETS.image("background"));
+		background = new Bild(0, 0, 1152, 864, Assets.image("background"));
 		game.addRaumObjekt(background);
 	}
 
@@ -47,7 +53,7 @@ public class LEVEL {
 	 * hat sie keine Funktion.
 	 */
 	public void create() {
-		vSound = new Sound(ASSETS.sound("victory"));
+		vSound = new Sound(Assets.sound("victory"));
 
 		switch (mode) {
 		case Easy:
@@ -166,18 +172,18 @@ public class LEVEL {
 		gameOverScreen();
 	}
 
-	public static LEVEL nextLevel(LEVEL level) {
+	public static BaseLevel nextLevel(BaseLevel level) {
 		switch (level.levelNumber) {
 		case 0:
-			return new LEVEL1(level.mode, level.gameReference);
+			return new Level1(level.mode, level.gameReference);
 		case 1:
-			return new LEVEL2(level.mode, level.gameReference);
+			return new Level2(level.mode, level.gameReference);
 		case 2:
-			return new LEVEL3(level.mode, level.gameReference);
+			return new Level3(level.mode, level.gameReference);
 		case 3:
-			return new LEVEL4(level.mode, level.gameReference);
+			return new Level4(level.mode, level.gameReference);
 		default:
-			return new STARTSCREEN(level.mode, level.gameReference);
+			return new SplashScreen(level.mode, level.gameReference);
 		}
 	}
 }

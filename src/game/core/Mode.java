@@ -4,8 +4,8 @@
  * @author Florian Schieder
  */
 
-package game;
+package game.core;
 
-public enum MODE {
+public enum Mode {
 	Easy, Normal, Hard, Extreme
 }

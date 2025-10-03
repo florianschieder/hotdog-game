@@ -4,13 +4,20 @@
  * @author Dennis Simontowsky
  */
 
-package game;
+package game.levels;
 
-public class LEVEL3 extends LEVEL {
-	private FLOOR boden1;
-	private FLOOR[] stairs_l;
-	private FLOOR[] stairs_r;
-	private KETCHUPBOTTLE kb;
+import game.core.Mode;
+import game.objects.Dog;
+import game.objects.Floor;
+import game.objects.Goal;
+import game.objects.KetchupBottle;
+import game.screens.HotdogGame;
+
+public class Level3 extends BaseLevel {
+	private Floor boden1;
+	private Floor[] stairs_l;
+	private Floor[] stairs_r;
+	private KetchupBottle kb;
 
 	/**
 	 * Konstruktur der Klasse LEVEL3.
@@ -18,11 +25,11 @@ public class LEVEL3 extends LEVEL {
 	 * @param mode Schwierigkeitsgrad
 	 * @param game Referenz auf das Spielobjekt
 	 */
-	public LEVEL3(MODE mode, HOTDOGGAME game) {
+	public Level3(Mode mode, HotdogGame game) {
 		super(mode, game);
 
-		this.stairs_l = new FLOOR[3];
-		this.stairs_r = new FLOOR[3];
+		this.stairs_l = new Floor[3];
+		this.stairs_r = new Floor[3];
 
 		levelNumber = 3;
 		create();
@@ -35,26 +42,26 @@ public class LEVEL3 extends LEVEL {
 	public void create() {
 		super.create();
 
-		this.player = new DOG(0, 0, this.gameReference);
+		this.player = new Dog(0, 0, this.gameReference);
 		this.gameReference.addGameObject(this.player);
 
-		this.kb = new KETCHUPBOTTLE(300, -40, this.gameReference);
+		this.kb = new KetchupBottle(300, -40, this.gameReference);
 		this.gameReference.addGameObject(this.kb);
 
-		this.boden1 = new FLOOR(0, 812, 100, 52);
+		this.boden1 = new Floor(0, 812, 100, 52);
 		this.gameReference.addGameObject(this.boden1);
 
 		for (int i = 0; i < stairs_l.length; i++) {
-			this.stairs_l[i] = new FLOOR(200, 300 + 250 * i, 100, 52);
+			this.stairs_l[i] = new Floor(200, 300 + 250 * i, 100, 52);
 			this.gameReference.addGameObject(this.stairs_l[i]);
 		}
 
 		for (int i = 0; i < stairs_r.length; i++) {
-			this.stairs_r[i] = new FLOOR(400, 200 + 250 * i, 100, 52);
+			this.stairs_r[i] = new Floor(400, 200 + 250 * i, 100, 52);
 			this.gameReference.addGameObject(this.stairs_r[i]);
 		}
 
-		this.goal = new GOAL(450, 110);
+		this.goal = new Goal(450, 110);
 		this.gameReference.addGameObject(this.goal);
 	}
 
@@ -67,11 +74,11 @@ public class LEVEL3 extends LEVEL {
 
 		this.gameReference.removeGameObject(this.boden1);
 
-		for (FLOOR element : stairs_l) {
+		for (Floor element : stairs_l) {
 			this.gameReference.removeGameObject(element);
 		}
 
-		for (FLOOR element : stairs_r) {
+		for (Floor element : stairs_r) {
 			this.gameReference.removeGameObject(element);
 		}
 

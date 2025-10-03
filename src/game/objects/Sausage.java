@@ -4,9 +4,9 @@
  * @author Dennis Simontowsky
  */
 
-package game;
+package game.objects;
 
-public class SAUSAGE extends GRAVITYOBJECT {
+public class Sausage extends GravityObject {
 	private int direction;
 
 	/**
@@ -15,7 +15,7 @@ public class SAUSAGE extends GRAVITYOBJECT {
 	 * @param player Referenz auf den Hund
 	 * @param d      Richtung ins Positive (+1) oder Negative (-1)
 	 */
-	public SAUSAGE(DOG player, int d) {
+	public Sausage(Dog player, int d) {
 		super((int) (player.image.getX() + (d * player.image.getBreite())),
 				(int) player.image.getY(), 32, 12, "sausage");
 		this.direction = d;

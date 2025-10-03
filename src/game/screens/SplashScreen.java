@@ -4,14 +4,24 @@
  * @author Dennis Simontowsky
  */
 
-package game;
+package game.screens;
 
-public class STARTSCREEN extends LEVEL {
-	private FLOOR boden1;
-	private FLOOR boden2;
-	private ENEMY enemy;
-	private HOTDOGSTALL stall;
-	private KETCHUPBOTTLE kb;
+import game.core.Assets;
+import game.core.Mode;
+import game.levels.BaseLevel;
+import game.objects.Dog;
+import game.objects.Enemy;
+import game.objects.Floor;
+import game.objects.Goal;
+import game.objects.KetchupBottle;
+import game.objects.SausageStall;
+
+public class SplashScreen extends BaseLevel {
+	private Floor boden1;
+	private Floor boden2;
+	private Enemy enemy;
+	private SausageStall stall;
+	private KetchupBottle kb;
 
 	/**
 	 * Konstruktur der Klasse STARTSCREEN.
@@ -19,7 +29,7 @@ public class STARTSCREEN extends LEVEL {
 	 * @param mode Schwierigkeitsgrad
 	 * @param game Referenz auf das Spielobjekt
 	 */
-	public STARTSCREEN(MODE mode, HOTDOGGAME game) {
+	public SplashScreen(Mode mode, HotdogGame game) {
 		super(mode, game);
 
 		levelNumber = 0;
@@ -36,31 +46,31 @@ public class STARTSCREEN extends LEVEL {
 		// Hintergrund ändern
 		this.gameReference.removeRaumObjekt(this.background);
 		this.background = new ea.Bild(0, 0, 1152, 864,
-				ASSETS.image("startscreen"));
+				Assets.image("startscreen"));
 		this.gameReference.addRaumObjekt(this.background);
 
 		// Text weg
 		this.gameReference.removeRaumObjekt(this.anzeige);
 
-		this.player = new DOG(0, 0, this.gameReference);
+		this.player = new Dog(0, 0, this.gameReference);
 		this.gameReference.addGameObject(this.player);
 
-		this.boden1 = new FLOOR(0, 812, 500, 52);
+		this.boden1 = new Floor(0, 812, 500, 52);
 		this.gameReference.addGameObject(this.boden1);
 
-		this.boden2 = new FLOOR(575, 812, 450, 52);
+		this.boden2 = new Floor(575, 812, 450, 52);
 		this.gameReference.addGameObject(this.boden2);
 
-		this.kb = new KETCHUPBOTTLE(500, 450, this.gameReference);
+		this.kb = new KetchupBottle(500, 450, this.gameReference);
 		this.gameReference.addGameObject(this.kb);
 
-		this.enemy = new ENEMY(300, 800);
+		this.enemy = new Enemy(300, 800);
 		this.gameReference.addGameObject(this.enemy);
 
-		this.stall = new HOTDOGSTALL(700, 700, this.mode, this.gameReference);
+		this.stall = new SausageStall(700, 700, this.mode, this.gameReference);
 		this.gameReference.addGameObject(this.stall);
 
-		this.goal = new GOAL(1000, 700);
+		this.goal = new Goal(1000, 700);
 		this.gameReference.addGameObject(this.goal);
 	}
 

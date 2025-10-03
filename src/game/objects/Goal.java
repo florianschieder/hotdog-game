@@ -4,16 +4,16 @@
  * @author Dennis Simontowsky
  */
 
-package game;
+package game.objects;
 
-public class GOAL extends GAMEOBJECT {
+public class Goal extends GameObject {
 	/**
 	 * Konstruktor der Klasse GOAL
 	 *
 	 * @param x x-Koordinate
 	 * @param y y-Koordinate
 	 */
-	public GOAL(int x, int y) {
+	public Goal(int x, int y) {
 		super(x, y, 55, 77, "goal", true);
 	}
 }

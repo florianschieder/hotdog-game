@@ -3,9 +3,9 @@
  *
  * @author Florian Schieder
  */
-package game;
+package game.objects;
 
-public class FLOOR extends GAMEOBJECT {
+public class Floor extends GameObject {
 	/**
 	 * Konstruktor der Klasse FLOOR
 	 *
@@ -14,7 +14,7 @@ public class FLOOR extends GAMEOBJECT {
 	 * @param w Breite
 	 * @param h Höhe
 	 */
-	public FLOOR(int x, int y, int w, int h) {
+	public Floor(int x, int y, int w, int h) {
 		super(x, y, w, h, "floor", true);
 	}
 }

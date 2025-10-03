@@ -3,11 +3,13 @@
  * @author Dennis Simontowsky
  */
 
-package game;
+package game.objects;
 
-public class KETCHUPBOTTLE extends GAMEOBJECT {
-	public GRAVITYOBJECT Ketchup;
-	public HOTDOGGAME g_verweis;
+import game.screens.HotdogGame;
+
+public class KetchupBottle extends GameObject {
+	public GravityObject Ketchup;
+	public HotdogGame g_verweis;
 
 	/**
 	 * Konstruktor für KETCHUPBOTTLE
@@ -17,7 +19,7 @@ public class KETCHUPBOTTLE extends GAMEOBJECT {
 	 * @param verweis Verweis auf das Spiel
 	 */
 
-	public KETCHUPBOTTLE(int x, int y, HOTDOGGAME verweis) {
+	public KetchupBottle(int x, int y, HotdogGame verweis) {
 		super(x, y, 62, 136, "ketchupbottle", true);
 		g_verweis = verweis;
 	}
@@ -27,7 +29,7 @@ public class KETCHUPBOTTLE extends GAMEOBJECT {
 	 */
 
 	public void throwKetchup() {
-		Ketchup = new GRAVITYOBJECT(
+		Ketchup = new GravityObject(
 				(int) (image.getX() + image.getBreite() / 2),
 				(int) (image.getY() + image.getHoehe()), 6, 69, "ketchup");
 		g_verweis.addGameObject(Ketchup);
@@ -36,7 +38,7 @@ public class KETCHUPBOTTLE extends GAMEOBJECT {
 	/**
 	 * Gibt an, ob die Animation in einer Dauerschleife ausgefuehrt werden soll
 	 */
-	public boolean loop(GAMEOBJECT object) {
+	public boolean loop(GameObject object) {
 		if (Ketchup != null && Ketchup.image != null
 				&& Ketchup.image.schneidet(object.image)) {
 			g_verweis.removeRaumObjekt(Ketchup.image);

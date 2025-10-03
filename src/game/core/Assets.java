@@ -4,9 +4,9 @@
  * @author Florian Schieder
  */
 
-package game;
+package game.core;
 
-public class ASSETS {
+public class Assets {
 	public static String image(String name) {
 		return "assets/images/" + name + ".png";
 	}

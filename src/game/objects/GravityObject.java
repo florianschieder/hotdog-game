@@ -3,9 +3,9 @@
  * @author Dennis Simontowsky
  */
 
-package game;
+package game.objects;
 
-public class GRAVITYOBJECT extends GAMEOBJECT {
+public class GravityObject extends GameObject {
 
 	/**
 	 * Konstruktor für GRAVITYOBJECT
@@ -16,7 +16,7 @@ public class GRAVITYOBJECT extends GAMEOBJECT {
 	 * @param h              Höhe
 	 * @param bildBezeichner Name des Bilds ohne Erweiterung (nur der Name)
 	 */
-	public GRAVITYOBJECT(int x, int y, int w, int h, String bildBezeichner) {
+	public GravityObject(int x, int y, int w, int h, String bildBezeichner) {
 		super(x, y, w, h, bildBezeichner, false);
 		this.image.schwerkraftSetzen(5);
 	}

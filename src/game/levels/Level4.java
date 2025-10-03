@@ -4,22 +4,30 @@
  * @author Dennis Simontowsky
  */
 
-package game;
+package game.levels;
 
-public class LEVEL4 extends LEVEL {
-	private FLOOR boden1;
-	private FLOOR boden2;
-	private FLOOR boden3;
-	private FLOOR[] stairs;
+import game.core.Mode;
+import game.objects.Dog;
+import game.objects.Enemy;
+import game.objects.Floor;
+import game.objects.Goal;
+import game.objects.SausageStall;
+import game.screens.HotdogGame;
 
-	private ENEMY enemy1;
-	private ENEMY enemy2;
-	private ENEMY enemy3;
-	private ENEMY enemy4;
-	private ENEMY enemy5;
-	private ENEMY enemy6;
+public class Level4 extends BaseLevel {
+	private Floor boden1;
+	private Floor boden2;
+	private Floor boden3;
+	private Floor[] stairs;
 
-	private HOTDOGSTALL stall;
+	private Enemy enemy1;
+	private Enemy enemy2;
+	private Enemy enemy3;
+	private Enemy enemy4;
+	private Enemy enemy5;
+	private Enemy enemy6;
+
+	private SausageStall stall;
 
 	/**
 	 * Konstruktur der Klasse LEVEL4.
@@ -27,11 +35,11 @@ public class LEVEL4 extends LEVEL {
 	 * @param mode Schwierigkeitsgrad
 	 * @param game Referenz auf das Spielobjekt
 	 */
-	public LEVEL4(MODE mode, HOTDOGGAME game) {
+	public Level4(Mode mode, HotdogGame game) {
 		super(mode, game);
 
 		this.levelNumber = 4;
-		this.stairs = new FLOOR[100];
+		this.stairs = new Floor[100];
 		this.create();
 	}
 
@@ -42,50 +50,50 @@ public class LEVEL4 extends LEVEL {
 	public void create() {
 		super.create();
 
-		this.player = new DOG(0, 0, this.gameReference);
+		this.player = new Dog(0, 0, this.gameReference);
 		this.gameReference.addGameObject(this.player);
 
-		this.boden1 = new FLOOR(0, 812, 1152, 52);
+		this.boden1 = new Floor(0, 812, 1152, 52);
 		this.gameReference.addGameObject(this.boden1);
 
-		this.boden2 = new FLOOR(152, 700, 800, 52);
+		this.boden2 = new Floor(152, 700, 800, 52);
 		this.gameReference.addGameObject(this.boden2);
 
-		this.boden3 = new FLOOR(60, -10, 58, 12 * 58);
+		this.boden3 = new Floor(60, -10, 58, 12 * 58);
 		this.gameReference.addGameObject(this.boden3);
 
-		this.enemy1 = new ENEMY(150 + this.gameReference.zufallsZahl(1000),
+		this.enemy1 = new Enemy(150 + this.gameReference.zufallsZahl(1000),
 				812);
 		this.gameReference.addGameObject(this.enemy1);
 
-		this.enemy2 = new ENEMY(150 + this.gameReference.zufallsZahl(1000),
+		this.enemy2 = new Enemy(150 + this.gameReference.zufallsZahl(1000),
 				200);
 		this.gameReference.addGameObject(this.enemy2);
 
-		this.enemy3 = new ENEMY(150 + this.gameReference.zufallsZahl(1000), 0);
+		this.enemy3 = new Enemy(150 + this.gameReference.zufallsZahl(1000), 0);
 		this.gameReference.addGameObject(this.enemy3);
 
-		this.enemy4 = new ENEMY(150 + this.gameReference.zufallsZahl(1000),
+		this.enemy4 = new Enemy(150 + this.gameReference.zufallsZahl(1000),
 				this.gameReference.zufallsZahl(300));
 		this.gameReference.addGameObject(this.enemy4);
 
-		this.enemy5 = new ENEMY(150 + this.gameReference.zufallsZahl(1000),
+		this.enemy5 = new Enemy(150 + this.gameReference.zufallsZahl(1000),
 				this.gameReference.zufallsZahl(500));
 		this.gameReference.addGameObject(this.enemy5);
 
-		this.enemy6 = new ENEMY(150 + this.gameReference.zufallsZahl(1000),
+		this.enemy6 = new Enemy(150 + this.gameReference.zufallsZahl(1000),
 				this.gameReference.zufallsZahl(800));
 		this.gameReference.addGameObject(this.enemy6);
 
-		this.stall = new HOTDOGSTALL(1050, 550, this.mode, this.gameReference);
+		this.stall = new SausageStall(1050, 550, this.mode, this.gameReference);
 		this.gameReference.addGameObject(this.stall);
 
 		for (int i = 0; i < stairs.length; i++) {
-			stairs[i] = new FLOOR(300 + 10 * i, 600 - 5 * i, 40, 52);
+			stairs[i] = new Floor(300 + 10 * i, 600 - 5 * i, 40, 52);
 			this.gameReference.addGameObject(stairs[i]);
 		}
 
-		this.goal = new GOAL(1100, 0);
+		this.goal = new Goal(1100, 0);
 		this.gameReference.addGameObject(this.goal);
 	}
 
@@ -121,7 +129,7 @@ public class LEVEL4 extends LEVEL {
 
 		this.gameReference.removeGameObject(this.stall);
 
-		for (FLOOR stair : stairs) {
+		for (Floor stair : stairs) {
 			this.gameReference.removeGameObject(stair);
 		}
 	}
@@ -130,34 +138,34 @@ public class LEVEL4 extends LEVEL {
 	public void limitLoop() {
 		super.limitLoop();
 
-		if (this.mode == MODE.Hard || this.mode == MODE.Extreme) {
+		if (this.mode == Mode.Hard || this.mode == Mode.Extreme) {
 			if (enemy1 != null) {
-				enemy1.image.sprung((this.mode == MODE.Extreme)
+				enemy1.image.sprung((this.mode == Mode.Extreme)
 						? this.gameReference.zufallsZahl(20)
 						: 5);
 			}
 			if (enemy2 != null) {
-				enemy2.image.sprung((this.mode == MODE.Extreme)
+				enemy2.image.sprung((this.mode == Mode.Extreme)
 						? this.gameReference.zufallsZahl(20)
 						: 5);
 			}
 			if (enemy3 != null) {
-				enemy3.image.sprung((this.mode == MODE.Extreme)
+				enemy3.image.sprung((this.mode == Mode.Extreme)
 						? this.gameReference.zufallsZahl(20)
 						: 5);
 			}
 			if (enemy4 != null) {
-				enemy4.image.sprung((this.mode == MODE.Extreme)
+				enemy4.image.sprung((this.mode == Mode.Extreme)
 						? this.gameReference.zufallsZahl(20)
 						: 5);
 			}
 			if (enemy5 != null) {
-				enemy5.image.sprung((this.mode == MODE.Extreme)
+				enemy5.image.sprung((this.mode == Mode.Extreme)
 						? this.gameReference.zufallsZahl(20)
 						: 5);
 			}
 			if (enemy6 != null) {
-				enemy6.image.sprung((this.mode == MODE.Extreme)
+				enemy6.image.sprung((this.mode == Mode.Extreme)
 						? this.gameReference.zufallsZahl(20)
 						: 5);
 			}

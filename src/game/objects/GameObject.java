@@ -4,11 +4,12 @@
  * @author Dennis Simontowsky
  */
 
-package game;
+package game.objects;
 
 import ea.Bild;
+import game.core.Assets;
 
-public class GAMEOBJECT {
+public class GameObject {
 	public Bild image;
 	private boolean isFix;
 
@@ -31,9 +32,9 @@ public class GAMEOBJECT {
 	 * @param bildBezeichner Name des Bilds ohne Erweiterung (nur der Name)
 	 * @param fix            Ist das Objekt fixiert oder nicht?
 	 */
-	public GAMEOBJECT(int x, int y, int w, int h, String bildBezeichner,
+	public GameObject(int x, int y, int w, int h, String bildBezeichner,
 			boolean fix) {
-		image = new Bild(x, y, w, h, ASSETS.image(bildBezeichner), true);
+		image = new Bild(x, y, w, h, Assets.image(bildBezeichner), true);
 		isFix = fix;
 
 		if (isFix) {
@@ -49,7 +50,7 @@ public class GAMEOBJECT {
 	 * @param obj Objekt, auf das Kollision überprüft werden soll
 	 */
 
-	public boolean collision(GAMEOBJECT obj) {
+	public boolean collision(GameObject obj) {
 		return image.schneidet(obj.image);
 	}
 }

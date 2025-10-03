@@ -12,7 +12,10 @@ package game;
 
 import javax.swing.JOptionPane;
 
-public class HOTDOGLAUNCHER {
+import game.core.Mode;
+import game.screens.HotdogGame;
+
+public class Launcher {
 
 	/**
 	 * Einsprungpunkt, der beim Programmstart ausgeführt wird
@@ -24,10 +27,10 @@ public class HOTDOGLAUNCHER {
 	public static void main(String[] args) {
 		// Alle Optionen für die Auswahlmöglichkeit des Schwierigkeitsgrads
 		// zusammenpacken
-		MODE[] modeSelectionValues = { MODE.Easy, MODE.Normal, MODE.Hard,
-				MODE.Extreme };
+		Mode[] modeSelectionValues = { Mode.Easy, Mode.Normal, Mode.Hard,
+				Mode.Extreme };
 
-		MODE modeSelection = (MODE) JOptionPane.showInputDialog(null, // Es gibt
+		Mode modeSelection = (Mode) JOptionPane.showInputDialog(null, // Es gibt
 																		// kein
 																		// übergeordnetes
 																		// Fenster
@@ -45,7 +48,7 @@ public class HOTDOGLAUNCHER {
 		);
 
 		if (modeSelection != null) {
-			new HOTDOGGAME(modeSelection);
+			new HotdogGame(modeSelection);
 		}
 	}
 }

@@ -3,9 +3,12 @@
  * @author Dennis Simontowsky
  */
 
-package game;
+package game.objects;
 
-public class HOTDOGSTALL extends GAMEOBJECT {
+import game.core.Mode;
+import game.screens.HotdogGame;
+
+public class SausageStall extends GameObject {
 	private boolean hasSausages = true;
 	public int sausages;
 
@@ -19,7 +22,7 @@ public class HOTDOGSTALL extends GAMEOBJECT {
 	 *                      gebrauch t wird
 	 */
 
-	public HOTDOGSTALL(int x, int y, MODE mode, HOTDOGGAME gameReference) {
+	public SausageStall(int x, int y, Mode mode, HotdogGame gameReference) {
 		super(x, y, 102, 86, "hotdogstall", true);
 		this.image.neutralMachen();
 		switch (mode) {

@@ -3,9 +3,9 @@
  *
  * @author Dennis Simontowsky
  */
-package game;
+package game.objects;
 
-public class ENEMY extends GRAVITYOBJECT {
+public class Enemy extends GravityObject {
 	/**
 	 * Konstruktor für den Gegner
 	 *
@@ -13,7 +13,7 @@ public class ENEMY extends GRAVITYOBJECT {
 	 * @param y bestimmt yKoordinate
 	 */
 
-	public ENEMY(int xStart, int y) {
+	public Enemy(int xStart, int y) {
 		super(xStart, y, 33, 59, "enemy1");
 	}
 }

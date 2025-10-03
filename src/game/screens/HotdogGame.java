@@ -6,17 +6,20 @@
  * @author Dennis Simontowsky & Florian Schieder
  */
 
-package game;
+package game.screens;
 
 import ea.Game;
 import ea.Raum;
 import ea.Taste;
 import ea.Ticker;
 import ea.internal.phy.Physik;
+import game.core.Mode;
+import game.levels.BaseLevel;
+import game.objects.GameObject;
 
 @SuppressWarnings("serial")
-public class HOTDOGGAME extends Game implements Ticker {
-	public LEVEL currentLevel;
+public class HotdogGame extends Game implements Ticker {
+	public BaseLevel currentLevel;
 	private int ticker = 0;
 	public Physik physics;
 
@@ -26,7 +29,7 @@ public class HOTDOGGAME extends Game implements Ticker {
 	 * @param mode Wert, der den Schwierigkeitsgrad angibt (ein Wert der
 	 *             Aufzählung MODE)
 	 */
-	public HOTDOGGAME(MODE mode) {
+	public HotdogGame(Mode mode) {
 		super(1152, 864, // Auflösung
 				"HOTDOG - " + mode.toString(), // Titel
 				false, // Vollbild
@@ -36,7 +39,7 @@ public class HOTDOGGAME extends Game implements Ticker {
 
 		physics = Physik.getPhysik();
 
-		currentLevel = new STARTSCREEN(mode, this);
+		currentLevel = new SplashScreen(mode, this);
 		currentLevel.start();
 
 		this.rechenintensiveArbeitSetzen(false);
@@ -45,9 +48,9 @@ public class HOTDOGGAME extends Game implements Ticker {
 	/**
 	 * Ändert das Level.
 	 */
-	public void nextLevel(LEVEL level) {
+	public void nextLevel(BaseLevel level) {
 		currentLevel.destroy();
-		currentLevel = LEVEL.nextLevel(level);
+		currentLevel = BaseLevel.nextLevel(level);
 		currentLevel.start();
 	}
 
@@ -105,14 +108,14 @@ public class HOTDOGGAME extends Game implements Ticker {
 	/**
 	 * Die Erweiterungsmethode, die ein GAMEOBJECT auf das Fenster legt.
 	 */
-	public void addGameObject(GAMEOBJECT obj) {
+	public void addGameObject(GameObject obj) {
 		addRaumObjekt(obj.image);
 	}
 
 	/**
 	 * Die Erweiterungsmethode, die ein GAMEOBJECT vom Fenster entfernt.
 	 */
-	public void removeGameObject(GAMEOBJECT obj) {
+	public void removeGameObject(GameObject obj) {
 		if (obj != null) {
 			removeRaumObjekt(obj.image);
 		}
