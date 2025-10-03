@@ -1,62 +1,31 @@
-# Projekt HOTDOG 
+# The Hotdog Game
 
-Beschreibung:
-=============
+## Background
 
-Bei diesem Projekt handelt es sich um ein Spiel, bei dem man einen Hund spielt. Dieser
-muss in Hotdogbuden Würstchen sammeln, um sich vor Gegnern zu schützen, und der tödlichen
-Ketchupflasche entkommen.
+This game has been a meaningless school project implemented by two German high school
+students, Dennis Simontowsky ([@Userdennis](https://github.com/Userdennis)) and me.
 
-Es gibt verschiedene Modi mit unterschiedlichen Zeitlimits, in denen man die Level schaffen
-muss. Doch die Zeitlimits sind nicht die einzigen Gemeinheit, die die einzelnen Modi mit sich
-bringen... :-)
+## Description
 
-Die Fenstergröße ist zurzeit einheitlich 1152 x 864 Pixel.
+In this desktop game you are playing a dog which needs to collect sausages in stalls
+to protect himself against herbal enemies. Further, he needs to escape the ketchup
+sprinkles of death.
 
-Derzeit wird (noch) die Engine-Alpha verwendet.
+The game offers different difficulty levels. The higher the difficulty, the less the
+time in which you need to complete the level, and the more other obstacles ;) 
 
-Konventionen:
-=============
+## Implementation notes
 
-1.) Dokumentation des Quellcodes:
----------------------------------
+Since this project has not been maintained the last years, the source code has received
+a little overhaul, but we're not yet there that it's a readable and maintainable codebase:
 
-Der Quellcode wird ausführlich dokumentiert. Das bedeutet, dass jede Klasse bzw. jede Methode einen
-vorgegebenen Dokumentationskommentar der jeweiligen Art besitzt.
-
-So dokumentieren wir eine Klasse / eine Enumeration / ein Interface:
-
-`/**`  
-` * Kurze Beschreibung der Klasse.`  
-` *`  
-` * Eventuell über mehrere Zeilen mit <br>`  
-` *`  
-` * @author [AUTOR DER DATEI]`  
-` */`  
-
-
-So dokumentieren wir eine Methode:
-
-`/**`  
-` * [BESCHREIBUNG DER METHODE. ZWINGEND IN EINE ZEILE]`  
-` *`   
-` * @param [argument] [Beschreibung]`   
-` * @return [Beschreibung]`   
-` */`   
-
-
-Pro Parameter einer Methode wird eine param-Zeile mit Argumentname und Beschreibung erzeugt,
-solange Parameter vorliegen. Wenn nicht, gibt es hier keine param-Zeilen.
-Sofern die Methode nicht <void> zurückliefert, muss es eine Beschreibung für den Rückgabewert
-geben.
-
-Ein Dokumentationskommentar steht jeweils direkt (!) vor den Köpfen (z.B. vor "public class ...",
-"interface ..." oder dem Methodenkopf).
-
-Darüber hinaus werden die wichtigsten, kompliziertesten Stellen mit "normalen" Kommentaren versehen.
-
-2.) Assets
-----------
-
-Bilder werden derzeit in assets/images/ und Musik wird in assets/sounds/... gespeichert.
-In einer Folgeversion ist eine Einbettung in die gesamte JAR-Datei geplant.
+- The code is still quite upside-down code, which is just what you get when a few
+  students without any practical experience start writing code that "just works" but
+  is... ehm... yes, upside-down.
+- Most javadoc comments are useless and still in German.
+- We are depending on a really ancient `engine-alpha` version. Upgrading to EA4
+  or migrating another mature game library would possibly be a great idea.
+- I'm not sure about whether we are there yet to run this on cross-platform.
+  As far as I remember, EA3 has no platform-specific assumptions, but I cannot
+  promise it works on any machine.
+- There are neither tests nor a build and release pipeline.  

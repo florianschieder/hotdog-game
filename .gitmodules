@@ -1,0 +1,3 @@
+[submodule "engine-alpha"]
+	path = engine-alpha
+	url = https://github.com/engine-alpha/engine-alpha/
